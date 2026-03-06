@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Asset &amp; Configuration Management Standard — Colearn Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root { --colearn-navy: #12335b; --colearn-navy-light: #1e4a7a; --text: #222; --border: #e0e4e8; --bg-subtle: #f6f8fa; }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; margin: 0; color: var(--text); background: #fff; }
+    .site-header { background: var(--colearn-navy); color: #fff; padding: 1rem 2rem; border-bottom: 3px solid var(--colearn-navy-light); }
+    .site-header h1 { margin: 0; font-size: 1.35rem; font-weight: 600; }
+    nav { background: var(--bg-subtle); padding: 0.5rem 2rem; border-bottom: 1px solid var(--border); }
+    nav a { color: var(--colearn-navy); text-decoration: none; padding: 0.5rem 0.75rem; margin-right: 0.25rem; border-radius: 4px; }
+    nav a:hover { background: #e8ecf0; text-decoration: none; }
+    nav a[aria-current="page"] { font-weight: 600; background: #fff; }
+    main { max-width: 52rem; margin: 0 auto; padding: 2rem; }
+    h1, h2, h3 { color: var(--colearn-navy); }
+    h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; margin-top: 1.5rem; }
+    h3 { font-size: 1.15rem; margin-top: 1.25rem; }
+    p { margin: 0.5rem 0; }
+    ul { margin: 0.25rem 0 0.75rem 1.5rem; }
+    a { color: var(--colearn-navy-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; }
+    .placeholder { background: #f8f9fa; border: 1px dashed var(--border); padding: 1rem; color: #666; font-style: italic; }
+    .no-print { margin-bottom: 1rem; }
+    .no-print button { padding: 0.4rem 0.75rem; font-size: 0.9rem; cursor: pointer; background: var(--colearn-navy); color: #fff; border: none; border-radius: 4px; }
+    .no-print button:hover { background: var(--colearn-navy-light); }
+    .policy-logo { max-height: 48px; margin-bottom: 1rem; display: block; }
+    .pending-approval { font-weight: 600; color: var(--colearn-navy); background: #e8ecf0; padding: 0.5rem 0.75rem; border-radius: 4px; margin-bottom: 1rem; display: inline-block; }
+    @media print { .site-header, nav, .no-print { display: none !important; } body { background: #fff; color: #000; } main { max-width: none; padding: 0; } a { color: #000; text-decoration: underline; } h1, h2, h3 { color: #000; } .pending-approval { background: #eee; color: #000; border: 1px solid #999; } }
+  </style>
+</head>
+<body>
+  <script src="auth.js"></script>
+  <script>
+  (function(){ if(sessionStorage.getItem('colearn_auth')===PASSWORD_HASH)return; var p=location.pathname+location.search; if(p.indexOf('login.html')!==-1)return; location.replace('login.html?redirect='+encodeURIComponent(p)); })();
+  </script>
+  <header class="site-header"><h1>Colearn Academy — Systems &amp; Security</h1></header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="security-policy.html">Security Program Policy</a>
+    <a href="policies-index.html">All Policies</a>
+    <a href="index.html#compliance">State Compliance</a>
+  </nav>
+  <main>
+    <p class="no-print"><button type="button" onclick="window.print()">Print / Save as PDF</button></p>
+    <img src="coLearn-academy-logo.png" alt="Colearn Academy" class="policy-logo">
+    <p class="pending-approval">(Drafted March 2026. Pending Governing Board Approval)</p>
+    <h1>Asset &amp; Configuration Management Standard</h1>
+    <p class="meta">Inventory of cloud systems and credentials used to access them; baseline configuration of those systems. No tracking of individual devices or hardware. Touches: Control 1 (hardware assets), Control 2 (software assets), Control 4 (secure configuration).</p>
+
+    <h2>1. Purpose</h2>
+    <p>This standard establishes minimum expectations for identifying and managing Colearn Academy’s cloud-based systems and the credentials used to access them, and for applying baseline configurations that support secure and reliable operations. The School does not track individual devices or hardware.</p>
+
+    <h2>2. Scope</h2>
+    <p>This standard applies to key cloud‑hosted systems and applications used for instructional or administrative purposes and to the cloud credentials (accounts and access) used to access those systems. It does not apply to inventorying or tracking individual devices or hardware; the School tracks only cloud systems and credentials.</p>
+    <p><strong>Operating context:</strong> Colearn Academy has no physical building and no school-owned hardware. Devices used for school purposes are owned by families or students. The School does not maintain a list of computers or other devices; it tracks only the cloud credentials used to access systems and user engagement with cloud services.</p>
+
+    <h2>3. Asset Inventory</h2>
+    <h3>3.1</h3>
+    <p>Colearn Academy will not maintain a list of computers or other devices used for school purposes. The School will maintain a list of actual hardware owned and controlled by the School (if any). The School tracks only cloud credentials used to access systems and user engagement with cloud services; there is no tracking of individual devices or hardware.</p>
+    <h3>3.2</h3>
+    <p>Colearn Academy will maintain an inventory or register of key cloud systems and services (for example, student information system, learning management system, communication and collaboration platforms, assessment platforms, and file storage services) and of the credentials and access methods used to reach them.</p>
+
+    <h2>4. Authorized Systems and Access</h2>
+    <h3>4.1</h3>
+    <p>Colearn Academy will identify authorized cloud systems and the credentials used to access them. The School does not define or track “authorized devices” or hardware; only cloud systems and account/credential access are in scope.</p>
+    <h3>4.2</h3>
+    <p>Where feasible, the School will take reasonable steps to limit the use of unauthorized credentials or access on school cloud systems and accounts (for example, through access controls, identity management, and acceptable-use expectations). No control or tracking of individual devices or hardware is required.</p>
+
+    <h2>5. Baseline Configuration</h2>
+    <h3>5.1</h3>
+    <p>The Information Security Lead, or a delegated technical role, will define baseline configuration expectations for key cloud systems and for the security of credentials used to access them (for example, authentication and access settings, role-based access, and security options offered by the platform). This standard does not require configuration or tracking of individual devices or hardware.</p>
+    <h3>5.2</h3>
+    <p>New cloud systems or accounts should be configured to align with baseline expectations before being placed into production use, when feasible.</p>
+
+    <h2>6. Configuration Changes</h2>
+    <h3>6.1</h3>
+    <p>Material configuration changes to critical cloud systems (for example, SIS, LMS, identity platform, or other key applications) should be documented in a simple change record (such as a ticket, log entry, or change register) that identifies the date, purpose, and responsible person.</p>
+
+    <h2>7. Review</h2>
+    <p>This standard will be reviewed at least annually and updated as needed to reflect changes in technology, risk, or best practices.</p>
+
+    <p class="no-print"><a href="policies-index.html">← All Policies</a></p>
+  </main>
+</body>
+</html>

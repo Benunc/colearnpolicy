@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Incident Response Plan — Colearn Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root { --colearn-navy: #12335b; --colearn-navy-light: #1e4a7a; --text: #222; --border: #e0e4e8; --bg-subtle: #f6f8fa; }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; margin: 0; color: var(--text); background: #fff; }
+    .site-header { background: var(--colearn-navy); color: #fff; padding: 1rem 2rem; border-bottom: 3px solid var(--colearn-navy-light); }
+    .site-header h1 { margin: 0; font-size: 1.35rem; font-weight: 600; }
+    nav { background: var(--bg-subtle); padding: 0.5rem 2rem; border-bottom: 1px solid var(--border); }
+    nav a { color: var(--colearn-navy); text-decoration: none; padding: 0.5rem 0.75rem; margin-right: 0.25rem; border-radius: 4px; }
+    nav a:hover { background: #e8ecf0; text-decoration: none; }
+    nav a[aria-current="page"] { font-weight: 600; background: #fff; }
+    main { max-width: 52rem; margin: 0 auto; padding: 2rem; }
+    h1, h2, h3 { color: var(--colearn-navy); }
+    h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; margin-top: 1.5rem; }
+    h3 { font-size: 1.15rem; margin-top: 1.25rem; }
+    p { margin: 0.5rem 0; }
+    ul { margin: 0.25rem 0 0.75rem 1.5rem; }
+    a { color: var(--colearn-navy-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; }
+    .placeholder { background: #f8f9fa; border: 1px dashed var(--border); padding: 1rem; color: #666; font-style: italic; }
+    .no-print { margin-bottom: 1rem; }
+    .no-print button { padding: 0.4rem 0.75rem; font-size: 0.9rem; cursor: pointer; background: var(--colearn-navy); color: #fff; border: none; border-radius: 4px; }
+    .no-print button:hover { background: var(--colearn-navy-light); }
+    .policy-logo { max-height: 48px; margin-bottom: 1rem; display: block; }
+    .pending-approval { font-weight: 600; color: var(--colearn-navy); background: #e8ecf0; padding: 0.5rem 0.75rem; border-radius: 4px; margin-bottom: 1rem; display: inline-block; }
+    @media print { .site-header, nav, .no-print { display: none !important; } body { background: #fff; color: #000; } main { max-width: none; padding: 0; } a { color: #000; text-decoration: underline; } h1, h2, h3 { color: #000; } .pending-approval { background: #eee; color: #000; border: 1px solid #999; } }
+  </style>
+</head>
+<body>
+  <script src="auth.js"></script>
+  <script>
+  (function(){ if(sessionStorage.getItem('colearn_auth')===PASSWORD_HASH)return; var p=location.pathname+location.search; if(p.indexOf('login.html')!==-1)return; location.replace('login.html?redirect='+encodeURIComponent(p)); })();
+  </script>
+  <header class="site-header"><h1>Colearn Academy — Systems &amp; Security</h1></header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="security-policy.html">Security Program Policy</a>
+    <a href="policies-index.html">All Policies</a>
+    <a href="index.html#compliance">State Compliance</a>
+  </nav>
+  <main>
+    <p class="no-print"><button type="button" onclick="window.print()">Print / Save as PDF</button></p>
+    <img src="coLearn-academy-logo.png" alt="Colearn Academy" class="policy-logo">
+    <p class="pending-approval">(Drafted March 2026. Pending Governing Board Approval)</p>
+    <h1>Incident Response Plan</h1>
+    <p class="meta">Roles, phases (detect, triage, contain, eradicate, recover), communications, when to notify law enforcement, parents, regulators/authorizers. Touches: Control 17 (Incident Response Management) and uses info from Controls 8, 11, 14.</p>
+
+    <h2>1. Purpose</h2>
+    <p>This plan outlines a high‑level approach for how Colearn Academy will prepare for, detect, respond to, and recover from cybersecurity incidents that could affect school systems, data, or operations.</p>
+
+    <h2>2. Scope</h2>
+    <p>This plan applies to incidents involving Colearn Academy information systems, data, or accounts, including incidents that occur in cloud‑hosted environments or involve third‑party services.</p>
+    <p><strong>Operating context:</strong> Colearn Academy has no physical building and no school-owned hardware. Incidents typically involve cloud services, accounts, or family-/user-owned devices used for school access.</p>
+
+    <h2>3. Roles and Responsibilities</h2>
+    <h3>3.1</h3>
+    <p>The Information Security Lead coordinates incident response activities and may convene an incident response team that includes representatives from leadership, technology, operations, and other areas as needed.</p>
+    <h3>3.2</h3>
+    <p>Roles and responsibilities may include: triage and technical analysis, communications, coordination with vendors, coordination with authorizers or other agencies, and documentation.</p>
+
+    <h2>4. Incident Lifecycle</h2>
+    <h3>4.1 Identification</h3>
+    <p>Potential incidents may be identified through user reports, alerts from security tools, vendor notifications, or other sources. Suspected incidents should be reported promptly to the Information Security Lead or designated contact.</p>
+
+    <h3>4.2 Triage and Containment</h3>
+    <p>Upon notification, the School will assess the nature and scope of the suspected incident and determine initial containment steps (for example, disabling accounts, isolating affected devices, or limiting access), as appropriate.</p>
+
+    <h3>4.3 Eradication and Recovery</h3>
+    <p>As feasible, the School will work to remove malicious components, correct misconfigurations, or otherwise address the root cause, and then restore affected systems and data from clean backups or reliable sources.</p>
+
+    <h3>4.4 Communication</h3>
+    <p>The School will determine what internal and external communications are needed, which may include notifying leadership, affected users, vendors, authorizers, or government entities, consistent with applicable laws and contractual obligations.</p>
+
+    <h3>4.5 Lessons Learned</h3>
+    <p>After significant incidents, the School will review what occurred, what worked well, and what can be improved. Findings may inform updates to policies, configurations, training, or this plan.</p>
+
+    <h2>5. Documentation</h2>
+    <h3>5.1</h3>
+    <p>The School will maintain basic records of significant incidents, including dates, systems or data involved, actions taken, and key decisions.</p>
+
+    <h2>6. Review</h2>
+    <p>This plan will be reviewed at least annually and after significant incidents to ensure it remains relevant and effective.</p>
+
+    <p class="no-print"><a href="policies-index.html">← All Policies</a></p>
+  </main>
+</body>
+</html>

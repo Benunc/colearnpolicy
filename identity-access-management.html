@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Identity, Account, and Access Management Policy — Colearn Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root { --colearn-navy: #12335b; --colearn-navy-light: #1e4a7a; --text: #222; --border: #e0e4e8; --bg-subtle: #f6f8fa; }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; margin: 0; color: var(--text); background: #fff; }
+    .site-header { background: var(--colearn-navy); color: #fff; padding: 1rem 2rem; border-bottom: 3px solid var(--colearn-navy-light); }
+    .site-header h1 { margin: 0; font-size: 1.35rem; font-weight: 600; }
+    nav { background: var(--bg-subtle); padding: 0.5rem 2rem; border-bottom: 1px solid var(--border); }
+    nav a { color: var(--colearn-navy); text-decoration: none; padding: 0.5rem 0.75rem; margin-right: 0.25rem; border-radius: 4px; }
+    nav a:hover { background: #e8ecf0; text-decoration: none; }
+    nav a[aria-current="page"] { font-weight: 600; background: #fff; }
+    main { max-width: 52rem; margin: 0 auto; padding: 2rem; }
+    h1, h2, h3 { color: var(--colearn-navy); }
+    h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; margin-top: 1.5rem; }
+    h3 { font-size: 1.15rem; margin-top: 1.25rem; }
+    p { margin: 0.5rem 0; }
+    ul { margin: 0.25rem 0 0.75rem 1.5rem; }
+    a { color: var(--colearn-navy-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; }
+    .placeholder { background: #f8f9fa; border: 1px dashed var(--border); padding: 1rem; color: #666; font-style: italic; }
+    .no-print { margin-bottom: 1rem; }
+    .no-print button { padding: 0.4rem 0.75rem; font-size: 0.9rem; cursor: pointer; background: var(--colearn-navy); color: #fff; border: none; border-radius: 4px; }
+    .no-print button:hover { background: var(--colearn-navy-light); }
+    .policy-logo { max-height: 48px; margin-bottom: 1rem; display: block; }
+    .pending-approval { font-weight: 600; color: var(--colearn-navy); background: #e8ecf0; padding: 0.5rem 0.75rem; border-radius: 4px; margin-bottom: 1rem; display: inline-block; }
+    @media print { .site-header, nav, .no-print { display: none !important; } body { background: #fff; color: #000; } main { max-width: none; padding: 0; } a { color: #000; text-decoration: underline; } h1, h2, h3 { color: #000; } .pending-approval { background: #eee; color: #000; border: 1px solid #999; } }
+  </style>
+</head>
+<body>
+  <script src="auth.js"></script>
+  <script>
+  (function(){ if(sessionStorage.getItem('colearn_auth')===PASSWORD_HASH)return; var p=location.pathname+location.search; if(p.indexOf('login.html')!==-1)return; location.replace('login.html?redirect='+encodeURIComponent(p)); })();
+  </script>
+  <header class="site-header"><h1>Colearn Academy — Systems &amp; Security</h1></header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="security-policy.html">Security Program Policy</a>
+    <a href="policies-index.html">All Policies</a>
+    <a href="index.html#compliance">State Compliance</a>
+  </nav>
+  <main>
+    <p class="no-print"><button type="button" onclick="window.print()">Print / Save as PDF</button></p>
+    <img src="coLearn-academy-logo.png" alt="Colearn Academy" class="policy-logo">
+    <p class="pending-approval">(Drafted March 2026. Pending Governing Board Approval)</p>
+    <h1>Identity, Account, and Access Management Policy</h1>
+    <p class="meta">Account lifecycle, roles, least‑privilege, MFA for admins, periodic access reviews. Touches: Control 5 (Account Management) and Control 6 (Access Control Management).</p>
+
+    <h2>1. Purpose</h2>
+    <p>This policy defines how Colearn Academy manages user identities, accounts, and access rights to help ensure that only authorized individuals have appropriate access to school systems and data.</p>
+
+    <h2>2. Scope</h2>
+    <p>This policy applies to all user accounts (including staff, contractors, volunteers, and students where applicable) that access Colearn Academy systems and data.</p>
+
+    <h2>3. Account Provisioning and Deprovisioning</h2>
+    <h3>3.1</h3>
+    <p>New accounts will be created only upon documented authorization (for example, HR onboarding, enrollment, or written request from a manager).</p>
+    <h3>3.2</h3>
+    <p>When a user’s role changes or their relationship with the School ends, their access will be updated or disabled in a timely manner based on available processes and tools.</p>
+
+    <h2>4. Access Rights and Least Privilege</h2>
+    <h3>4.1</h3>
+    <p>Access to systems and data will be based on role and job responsibilities, following the principle of least privilege.</p>
+    <h3>4.2</h3>
+    <p>Administrative or high‑privilege accounts will be limited to staff who require such access to perform their duties.</p>
+    <h3>4.3</h3>
+    <p>Colearn Academy will phase in separate non‑privileged and administrative accounts for staff with elevated access. Initial focus will be on highest‑impact systems (e.g., identity provider, SIS, LMS). Target: design in FY 2025–26; staged rollout in FY 2026–27.</p>
+
+    <h2>5. Authentication Practices</h2>
+    <h3>5.1</h3>
+    <p>User accounts must be protected by passwords or other authentication mechanisms that comply with minimum complexity or length requirements defined by the School and/or underlying platforms. Role-based differences for default passwords and multi‑factor authentication are set forth in section 6.</p>
+    <h3>5.2</h3>
+    <p>Where feasible, multi‑factor authentication (MFA) will be used for administrative or high‑risk accounts and may be expanded to other accounts over time based on risk. Staff are required to use MFA as specified in section 6.</p>
+
+    <h2>6. Default Passwords and Requirements by Role</h2>
+    <h3>6.1 Staff</h3>
+    <p>Staff accounts may access sensitive or confidential data beyond the staff member’s own information. Default or initial passwords for staff must meet strong password requirements defined by the School or the underlying platform. Staff are required to use multi‑factor authentication (2FA). Strong passwords and 2FA apply even to initial or default credentials; staff must complete any required password change or 2FA enrollment before using systems that handle sensitive data.</p>
+    <h3>6.2 Students</h3>
+    <p>Student accounts do not have access to sensitive data other than the student’s own information. Students may be assigned memorable default passwords that do not meet strict complexity requirements, to support usability and age-appropriate access. Students are encouraged to change their password when able. Staff are held to a higher standard than students because of the sensitivity of data staff may access.</p>
+
+    <h2>7. Application and Vendor Support</h2>
+    <p>Colearn Academy will track whether the applications and services used for school purposes receive regular vendor support and security updates. This requirement applies to web-based and cloud applications that the School uses to deliver instruction or conduct operations. It is not based on software installed on school-owned devices; the School has no school-owned hardware, and the applications in scope are primarily web applications accessed via the internet. The Information Security Lead or designee will maintain awareness of vendor support status for applications in the School’s inventory and will document or tag applications that are no longer receiving regular support so that they may be addressed in accordance with the School’s risk management and procurement practices.</p>
+
+    <h2>8. Periodic Review</h2>
+    <h3>8.1</h3>
+    <p>At least annually, the Information Security Lead or designee will coordinate a review of access to selected critical systems to confirm that access remains appropriate.</p>
+
+    <h2>9. Review</h2>
+    <p>This policy will be reviewed at least annually and updated as needed to reflect changes in systems, roles, or risk.</p>
+
+    <p class="no-print"><a href="policies-index.html">← All Policies</a></p>
+  </main>
+</body>
+</html>

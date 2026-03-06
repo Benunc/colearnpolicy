@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Colearn Academy Information Security & Cybersecurity Program Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --colearn-navy: #12335b;
+      --colearn-navy-light: #1e4a7a;
+      --text: #222;
+      --border: #e0e4e8;
+      --bg-subtle: #f6f8fa;
+    }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; margin: 0; color: var(--text); background: #fff; }
+    .site-header {
+      background: var(--colearn-navy);
+      color: #fff;
+      padding: 1rem 2rem;
+      border-bottom: 3px solid var(--colearn-navy-light);
+    }
+    .site-header h1 { margin: 0; font-size: 1.35rem; font-weight: 600; }
+    nav {
+      background: var(--bg-subtle);
+      padding: 0.5rem 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    nav a {
+      color: var(--colearn-navy);
+      text-decoration: none;
+      padding: 0.5rem 0.75rem;
+      margin-right: 0.25rem;
+      border-radius: 4px;
+    }
+    nav a:hover { background: #e8ecf0; text-decoration: none; }
+    nav a[aria-current="page"] { font-weight: 600; background: #fff; }
+    main { max-width: 52rem; margin: 0 auto; padding: 2rem; }
+    h1, h2, h3 { color: var(--colearn-navy); }
+    h1 { font-size: 1.8rem; margin-bottom: 1rem; }
+    h2 { font-size: 1.4rem; margin-top: 1.5rem; }
+    h3 { font-size: 1.15rem; margin-top: 1.25rem; }
+    p { margin: 0.5rem 0; }
+    ul { margin: 0.25rem 0 0.75rem 1.5rem; }
+    strong { font-weight: 600; }
+    a { color: var(--colearn-navy-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta { margin-top: 2rem; font-style: italic; }
+    .no-print { margin-bottom: 1rem; }
+    .no-print button { padding: 0.4rem 0.75rem; font-size: 0.9rem; cursor: pointer; background: var(--colearn-navy); color: #fff; border: none; border-radius: 4px; }
+    .no-print button:hover { background: var(--colearn-navy-light); }
+    .policy-logo { max-height: 48px; margin-bottom: 1rem; display: block; }
+    .pending-approval { font-weight: 600; color: var(--colearn-navy); background: #e8ecf0; padding: 0.5rem 0.75rem; border-radius: 4px; margin-bottom: 1rem; display: inline-block; }
+    @media print {
+      .site-header, nav, .no-print { display: none !important; }
+      body { background: #fff; color: #000; }
+      main { max-width: none; padding: 0; }
+      a { color: #000; text-decoration: underline; }
+      h1, h2, h3 { color: #000; }
+      .pending-approval { background: #eee; color: #000; border: 1px solid #999; }
+    }
+  </style>
+</head>
+<body>
+  <script src="auth.js"></script>
+  <script>
+  (function(){ if(sessionStorage.getItem('colearn_auth')===PASSWORD_HASH)return; var p=location.pathname+location.search; if(p.indexOf('login.html')!==-1)return; location.replace('login.html?redirect='+encodeURIComponent(p)); })();
+  </script>
+
+  <header class="site-header">
+    <h1>Colearn Academy — Systems &amp; Security</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="security-policy.html" aria-current="page">Security Program Policy</a>
+    <a href="policies-index.html">All Policies</a>
+    <a href="index.html#compliance">State Compliance</a>
+  </nav>
+
+  <main>
+  <p class="no-print"><button type="button" onclick="window.print()">Print / Save as PDF</button></p>
+  <img src="coLearn-academy-logo.png" alt="Colearn Academy" class="policy-logo">
+  <p class="pending-approval">(Drafted March 2026. Pending Governing Board Approval)</p>
+
+  <h1>Information Security &amp; Cybersecurity Program Policy</h1>
+
+  <h2>1. Purpose</h2>
+  <p>Colearn Academy establishes this Information Security &amp; Cybersecurity Program Policy to protect student, staff, and institutional information and to support the reliable operation of instructional and administrative systems. This policy defines the overall approach, roles, and expectations for managing cybersecurity risk at Colearn Academy.</p>
+
+  <h2>2. Scope</h2>
+  <p>This policy applies to all employees, contractors, vendors, volunteers, and any other individuals or entities that access Colearn Academy information systems or handle Colearn Academy data, regardless of physical location or state of operation.</p>
+  <p><strong>Operating context:</strong> Colearn Academy is a virtual school with no physical building and no school-owned hardware. Devices used for school purposes are owned by families or students.</p>
+
+  <h2>3. Governance and Roles</h2>
+  <h3>3.1 Information Security Lead</h3>
+  <p>Colearn Academy designates the Director of Technology and Systems as the Information Security Lead. The Information Security Lead is responsible for coordinating cybersecurity activities, overseeing implementation of this and related policies, and serving as a primary point of contact with authorizers and applicable agencies on cybersecurity matters.</p>
+
+  <h3>3.2 Reporting</h3>
+  <p>The Information Security Lead will provide at least one annual update to school leadership and the governing board summarizing: (a) results of cybersecurity assessments, (b) key risks and gaps relative to baseline controls, and (c) progress on the cybersecurity roadmap and planned next steps.</p>
+
+  <h3>3.3 Frameworks and Standards</h3>
+  <p>Colearn Academy uses widely recognized cybersecurity frameworks appropriate for K–12 environments, including the CIS Critical Security Controls (with emphasis on Implementation Group 1) and the NIST Cybersecurity Framework core functions (Identify, Protect, Detect, Respond, Recover), as references for organizing and prioritizing safeguards. Specific technologies and vendors are selected based on risk, feasibility, and available resources.</p>
+
+  <h3>3.4 Governance Alignment</h3>
+  <p>Colearn Academy will coordinate with its authorizers and applicable state requirements in each jurisdiction. In South Carolina, the School is currently authorized by the Limestone Charter Association and will join the Charter Institute at Erskine (Erskine Charter) in the next school year. In Arizona, Colearn Academy operates as its own district. Public information on the South Carolina authorizers can be found at:</p>
+  <ul>
+    <li>Limestone Charter Association (current): <a href="https://limestonecharter.org" target="_blank" rel="noopener">https://limestonecharter.org</a></li>
+    <li>Charter Institute at Erskine (joining next school year): <a href="https://erskinecharters.org" target="_blank" rel="noopener">https://erskinecharters.org</a></li>
+  </ul>
+
+  <h2>4. Cybersecurity Roadmap</h2>
+  <p>Colearn Academy will maintain a written cybersecurity roadmap that identifies prioritized initiatives for improving security over a multi‑year period. The roadmap will be based on assessment results and will be reviewed at least annually and updated as needed.</p>
+
+  <h2>5. Policy Relationships</h2>
+  <p>This overarching policy is supported by topic‑specific policies and standards, including but not limited to: Asset &amp; Configuration Management, Identity &amp; Access Management, Data Protection &amp; Privacy, Vulnerability &amp; Patch Management, Logging &amp; Monitoring, Email/Web/Endpoint Protection, Backup &amp; Recovery, Service Provider Management, Security Awareness &amp; Training, and Incident Response.</p>
+
+  <h2>6. Review</h2>
+  <p>This policy will be reviewed at least annually by the Information Security Lead and updated as necessary to reflect changes in risk, technology, or regulatory requirements.</p>
+
+  <p class="no-print"><a href="index.html">← Back to Home</a> · <a href="policies-index.html">All Policies</a></p>
+
+  </main>
+
+</body>
+</html>

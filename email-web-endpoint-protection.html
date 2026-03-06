@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Email, Web, and Endpoint Protection Standard — Colearn Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root { --colearn-navy: #12335b; --colearn-navy-light: #1e4a7a; --text: #222; --border: #e0e4e8; --bg-subtle: #f6f8fa; }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; margin: 0; color: var(--text); background: #fff; }
+    .site-header { background: var(--colearn-navy); color: #fff; padding: 1rem 2rem; border-bottom: 3px solid var(--colearn-navy-light); }
+    .site-header h1 { margin: 0; font-size: 1.35rem; font-weight: 600; }
+    nav { background: var(--bg-subtle); padding: 0.5rem 2rem; border-bottom: 1px solid var(--border); }
+    nav a { color: var(--colearn-navy); text-decoration: none; padding: 0.5rem 0.75rem; margin-right: 0.25rem; border-radius: 4px; }
+    nav a:hover { background: #e8ecf0; text-decoration: none; }
+    nav a[aria-current="page"] { font-weight: 600; background: #fff; }
+    main { max-width: 52rem; margin: 0 auto; padding: 2rem; }
+    h1, h2, h3 { color: var(--colearn-navy); }
+    h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; margin-top: 1.5rem; }
+    h3 { font-size: 1.15rem; margin-top: 1.25rem; }
+    p { margin: 0.5rem 0; }
+    ul { margin: 0.25rem 0 0.75rem 1.5rem; }
+    a { color: var(--colearn-navy-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; }
+    .placeholder { background: #f8f9fa; border: 1px dashed var(--border); padding: 1rem; color: #666; font-style: italic; }
+    .no-print { margin-bottom: 1rem; }
+    .no-print button { padding: 0.4rem 0.75rem; font-size: 0.9rem; cursor: pointer; background: var(--colearn-navy); color: #fff; border: none; border-radius: 4px; }
+    .no-print button:hover { background: var(--colearn-navy-light); }
+    .policy-logo { max-height: 48px; margin-bottom: 1rem; display: block; }
+    .pending-approval { font-weight: 600; color: var(--colearn-navy); background: #e8ecf0; padding: 0.5rem 0.75rem; border-radius: 4px; margin-bottom: 1rem; display: inline-block; }
+    @media print { .site-header, nav, .no-print { display: none !important; } body { background: #fff; color: #000; } main { max-width: none; padding: 0; } a { color: #000; text-decoration: underline; } h1, h2, h3 { color: #000; } .pending-approval { background: #eee; color: #000; border: 1px solid #999; } }
+  </style>
+</head>
+<body>
+  <script src="auth.js"></script>
+  <script>
+  (function(){ if(sessionStorage.getItem('colearn_auth')===PASSWORD_HASH)return; var p=location.pathname+location.search; if(p.indexOf('login.html')!==-1)return; location.replace('login.html?redirect='+encodeURIComponent(p)); })();
+  </script>
+  <header class="site-header"><h1>Colearn Academy — Systems &amp; Security</h1></header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="security-policy.html">Security Program Policy</a>
+    <a href="policies-index.html">All Policies</a>
+    <a href="index.html#compliance">State Compliance</a>
+  </nav>
+  <main>
+    <p class="no-print"><button type="button" onclick="window.print()">Print / Save as PDF</button></p>
+    <img src="coLearn-academy-logo.png" alt="Colearn Academy" class="policy-logo">
+    <p class="pending-approval">(Drafted March 2026. Pending Governing Board Approval)</p>
+    <h1>Email, Web, and Endpoint Protection Standard</h1>
+    <p class="meta">Spam/malware filtering expectations, attachment/URL defenses, basic web protections (e.g., student content filters if applicable), antivirus/EDR expectations. Touches: Control 9 (Email and Web Browser Protections), Control 10 (Malware Defenses).</p>
+
+    <h2>1. Purpose</h2>
+    <p>This standard sets expectations for protecting Colearn Academy users and devices from common threats delivered via email, web browsing, and malicious software.</p>
+
+    <h2>2. Scope</h2>
+    <p>This standard applies to school‑managed email services, web access used for school purposes, and school‑managed endpoint devices.</p>
+    <p><strong>Operating context:</strong> Colearn Academy has no physical building and no school-owned hardware. Endpoint “devices” are owned by families or students; “school‑managed” means school email and web accounts and any security configuration or software the School requires or recommends on those devices.</p>
+
+    <h2>3. Email Protections</h2>
+    <h3>3.1</h3>
+    <p>Colearn Academy will use available email security features (for example, spam and malware filtering) provided by its email platform or related tools to reduce unwanted and malicious messages.</p>
+    <h3>3.2</h3>
+    <p>Users should exercise caution when opening attachments or clicking links from unknown or unexpected senders and are encouraged to report suspicious messages.</p>
+
+    <h2>4. Web Protections</h2>
+    <h3>4.1</h3>
+    <p>Where feasible, Colearn Academy will use available controls or services to reduce access to known malicious or inappropriate websites, especially for student accounts.</p>
+    <h3>4.2</h3>
+    <p>Users are expected to follow acceptable use guidelines and to avoid risky web behavior that could expose school systems or data to harm.</p>
+
+    <h2>5. Supported Browsers and Email Clients</h2>
+    <h3>5.1</h3>
+    <p>Colearn Academy requires that users access school systems using vendor‑supported, up‑to‑date web browsers and email clients. The School relies on native update mechanisms (such as automatic updates enabled by default in modern browsers and email applications) to help ensure that users remain on supported versions.</p>
+    <h3>5.2</h3>
+    <p>Where the School manages browsers directly (for example, managed Chrome profiles or school‑issued devices), automatic updates will be enabled where feasible, and users are expected not to disable or circumvent these update mechanisms. For key instructional platforms such as the learning management system, the School follows the platform’s published supported‑browser requirements (for example, “current and previous major versions” of mainstream browsers) and communicates these expectations to staff and students.</p>
+    <h3>5.3</h3>
+    <p>Users are expected to avoid using outdated or unsupported browsers and email clients for accessing school systems. If a user encounters compatibility warnings indicating that their browser or email client is unsupported, they are expected to update or switch to a supported option before continuing to use school systems.</p>
+
+    <h2>6. Endpoint Protection</h2>
+    <h3>6.1</h3>
+    <p>Devices used for school purposes (family- or user-owned) should have antivirus or equivalent endpoint protection software installed and enabled, where supported; the School may require or recommend specific protections as a condition of access.</p>
+    <h3>6.2</h3>
+    <p>Device users should not disable or circumvent security protections required or recommended by the School on devices used for school purposes.</p>
+
+    <h2>7. Review</h2>
+    <p>This standard will be reviewed at least annually and updated as needed to reflect changes in threats, technology, or tools available to the School.</p>
+
+    <p class="no-print"><a href="policies-index.html">← All Policies</a></p>
+  </main>
+</body>
+</html>

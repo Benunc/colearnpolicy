@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logging &amp; Monitoring Standard — Colearn Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root { --colearn-navy: #12335b; --colearn-navy-light: #1e4a7a; --text: #222; --border: #e0e4e8; --bg-subtle: #f6f8fa; }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; margin: 0; color: var(--text); background: #fff; }
+    .site-header { background: var(--colearn-navy); color: #fff; padding: 1rem 2rem; border-bottom: 3px solid var(--colearn-navy-light); }
+    .site-header h1 { margin: 0; font-size: 1.35rem; font-weight: 600; }
+    nav { background: var(--bg-subtle); padding: 0.5rem 2rem; border-bottom: 1px solid var(--border); }
+    nav a { color: var(--colearn-navy); text-decoration: none; padding: 0.5rem 0.75rem; margin-right: 0.25rem; border-radius: 4px; }
+    nav a:hover { background: #e8ecf0; text-decoration: none; }
+    nav a[aria-current="page"] { font-weight: 600; background: #fff; }
+    main { max-width: 52rem; margin: 0 auto; padding: 2rem; }
+    h1, h2, h3 { color: var(--colearn-navy); }
+    h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; margin-top: 1.5rem; }
+    h3 { font-size: 1.15rem; margin-top: 1.25rem; }
+    p { margin: 0.5rem 0; }
+    ul { margin: 0.25rem 0 0.75rem 1.5rem; }
+    a { color: var(--colearn-navy-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; }
+    .placeholder { background: #f8f9fa; border: 1px dashed var(--border); padding: 1rem; color: #666; font-style: italic; }
+    .no-print { margin-bottom: 1rem; }
+    .no-print button { padding: 0.4rem 0.75rem; font-size: 0.9rem; cursor: pointer; background: var(--colearn-navy); color: #fff; border: none; border-radius: 4px; }
+    .no-print button:hover { background: var(--colearn-navy-light); }
+    .policy-logo { max-height: 48px; margin-bottom: 1rem; display: block; }
+    .pending-approval { font-weight: 600; color: var(--colearn-navy); background: #e8ecf0; padding: 0.5rem 0.75rem; border-radius: 4px; margin-bottom: 1rem; display: inline-block; }
+    @media print { .site-header, nav, .no-print { display: none !important; } body { background: #fff; color: #000; } main { max-width: none; padding: 0; } a { color: #000; text-decoration: underline; } h1, h2, h3 { color: #000; } .pending-approval { background: #eee; color: #000; border: 1px solid #999; } }
+  </style>
+</head>
+<body>
+  <script src="auth.js"></script>
+  <script>
+  (function(){ if(sessionStorage.getItem('colearn_auth')===PASSWORD_HASH)return; var p=location.pathname+location.search; if(p.indexOf('login.html')!==-1)return; location.replace('login.html?redirect='+encodeURIComponent(p)); })();
+  </script>
+  <header class="site-header"><h1>Colearn Academy — Systems &amp; Security</h1></header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="security-policy.html">Security Program Policy</a>
+    <a href="policies-index.html">All Policies</a>
+    <a href="index.html#compliance">State Compliance</a>
+  </nav>
+  <main>
+    <p class="no-print"><button type="button" onclick="window.print()">Print / Save as PDF</button></p>
+    <img src="coLearn-academy-logo.png" alt="Colearn Academy" class="policy-logo">
+    <p class="pending-approval">(Drafted March 2026. Pending Governing Board Approval)</p>
+    <h1>Logging &amp; Monitoring Standard</h1>
+    <p class="meta">What logs you keep (e.g., cloud admin actions, sign‑ins, endpoint alerts) and minimal retention; who reviews them and when (even if lightweight). Touches: Control 8 (Audit Log Management), supports Control 17.</p>
+
+    <h2>1. Purpose</h2>
+    <p>This standard defines minimum expectations for generating and reviewing logs that may be useful for detecting and investigating cybersecurity‑related events at Colearn Academy.</p>
+
+    <h2>2. Scope</h2>
+    <p>This standard applies to critical systems and services where the School has access to logging and monitoring capabilities, including but not limited to identity platforms, key cloud services, and security tools.</p>
+    <p><strong>Operating context:</strong> Colearn Academy has no physical building and no school-owned hardware. Logging and monitoring apply to cloud and identity platforms and to any security tools the School uses; there is no on‑premises infrastructure.</p>
+
+    <h2>3. Log Generation</h2>
+    <h3>3.1</h3>
+    <p>Where practical, Colearn Academy will enable logging features provided by critical systems and security tools, especially for administrative actions, sign‑ins, and security‑related events.</p>
+
+    <h2>4. Retention</h2>
+    <h3>4.1</h3>
+    <p>Logs for critical systems should be retained for a reasonable period, subject to technical and cost constraints, to support basic investigation of incidents.</p>
+
+    <h2>5. Review</h2>
+    <h3>5.1</h3>
+    <p>The Information Security Lead or designee will review available security‑relevant alerts and logs on a periodic basis, focusing on higher‑risk systems and events.</p>
+    <h3>5.2</h3>
+    <p>Potentially suspicious activity identified through logs or alerts will be evaluated and, if necessary, escalated in accordance with the Incident Response Plan.</p>
+
+    <h2>6. Review</h2>
+    <p>This standard will be reviewed at least annually and updated as needed based on changes in systems, tooling, and risk.</p>
+
+    <p class="no-print"><a href="policies-index.html">← All Policies</a></p>
+  </main>
+</body>
+</html>

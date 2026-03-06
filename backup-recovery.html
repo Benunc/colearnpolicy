@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Backup &amp; Recovery Standard — Colearn Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root { --colearn-navy: #12335b; --colearn-navy-light: #1e4a7a; --text: #222; --border: #e0e4e8; --bg-subtle: #f6f8fa; }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; margin: 0; color: var(--text); background: #fff; }
+    .site-header { background: var(--colearn-navy); color: #fff; padding: 1rem 2rem; border-bottom: 3px solid var(--colearn-navy-light); }
+    .site-header h1 { margin: 0; font-size: 1.35rem; font-weight: 600; }
+    nav { background: var(--bg-subtle); padding: 0.5rem 2rem; border-bottom: 1px solid var(--border); }
+    nav a { color: var(--colearn-navy); text-decoration: none; padding: 0.5rem 0.75rem; margin-right: 0.25rem; border-radius: 4px; }
+    nav a:hover { background: #e8ecf0; text-decoration: none; }
+    nav a[aria-current="page"] { font-weight: 600; background: #fff; }
+    main { max-width: 52rem; margin: 0 auto; padding: 2rem; }
+    h1, h2, h3 { color: var(--colearn-navy); }
+    h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; margin-top: 1.5rem; }
+    h3 { font-size: 1.15rem; margin-top: 1.25rem; }
+    p { margin: 0.5rem 0; }
+    ul { margin: 0.25rem 0 0.75rem 1.5rem; }
+    a { color: var(--colearn-navy-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; }
+    .placeholder { background: #f8f9fa; border: 1px dashed var(--border); padding: 1rem; color: #666; font-style: italic; }
+    .no-print { margin-bottom: 1rem; }
+    .no-print button { padding: 0.4rem 0.75rem; font-size: 0.9rem; cursor: pointer; background: var(--colearn-navy); color: #fff; border: none; border-radius: 4px; }
+    .no-print button:hover { background: var(--colearn-navy-light); }
+    .policy-logo { max-height: 48px; margin-bottom: 1rem; display: block; }
+    .pending-approval { font-weight: 600; color: var(--colearn-navy); background: #e8ecf0; padding: 0.5rem 0.75rem; border-radius: 4px; margin-bottom: 1rem; display: inline-block; }
+    @media print { .site-header, nav, .no-print { display: none !important; } body { background: #fff; color: #000; } main { max-width: none; padding: 0; } a { color: #000; text-decoration: underline; } h1, h2, h3 { color: #000; } .pending-approval { background: #eee; color: #000; border: 1px solid #999; } }
+  </style>
+</head>
+<body>
+  <script src="auth.js"></script>
+  <script>
+  (function(){ if(sessionStorage.getItem('colearn_auth')===PASSWORD_HASH)return; var p=location.pathname+location.search; if(p.indexOf('login.html')!==-1)return; location.replace('login.html?redirect='+encodeURIComponent(p)); })();
+  </script>
+  <header class="site-header"><h1>Colearn Academy — Systems &amp; Security</h1></header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="security-policy.html">Security Program Policy</a>
+    <a href="policies-index.html">All Policies</a>
+    <a href="index.html#compliance">State Compliance</a>
+  </nav>
+  <main>
+    <p class="no-print"><button type="button" onclick="window.print()">Print / Save as PDF</button></p>
+    <img src="coLearn-academy-logo.png" alt="Colearn Academy" class="policy-logo">
+    <p class="pending-approval">(Drafted March 2026. Pending Governing Board Approval)</p>
+    <h1>Backup &amp; Recovery Standard</h1>
+    <p class="meta">What gets backed up, how often, where, how long you keep it, and a requirement to periodically test restoration. Touches: Control 11 (Data Recovery) and supports Control 3 (Data Protection).</p>
+
+    <h2>1. Purpose</h2>
+    <p>This standard defines expectations for backing up and restoring critical Colearn Academy systems and data to support continuity of operations in the event of data loss or system disruption.</p>
+
+    <h2>2. Scope</h2>
+    <p>This standard applies to identified critical systems and data stores that are under Colearn Academy’s control or for which the School coordinates backup arrangements with service providers.</p>
+    <p><strong>Operating context:</strong> Colearn Academy has no physical building and no school-owned hardware. Critical systems and data are cloud-based; backup and recovery arrangements are with cloud and software providers.</p>
+
+    <h2>3. Identification of Critical Systems and Data</h2>
+    <h3>3.1</h3>
+    <p>Colearn Academy will identify systems and data that are critical to instructional and administrative operations (for example, student information, learning systems, and key financial and operational records). The School maintains backups of essential cloud data and of learning management system (LMS) data, consistent with the critical systems and data identified under this standard.</p>
+    <h3>3.2</h3>
+    <p>Essential cloud data and LMS system data are in scope for backup and recovery. Backup arrangements may be provided by the School’s cloud and LMS vendors or by separate backup services; the Information Security Lead or designee will ensure that backup coverage for these systems is in place and documented.</p>
+
+    <h2>4. Backup Practices</h2>
+    <h3>4.1</h3>
+    <p>Critical systems and data will be backed up on a regular schedule appropriate to their importance and rate of change, using methods supported by the School’s tools and vendors.</p>
+    <h3>4.2</h3>
+    <p>Backups must be protected via physical security or encryption when stored and when moved across the network. This includes remote backups and backups held by cloud services. Colearn Academy does not operate its own backup infrastructure; the School’s backups are held by cloud providers, LMS vendors, or third‑party backup services. The onus for implementing encryption (at rest and in transit) and physical security of backup storage and facilities lies with those providers. The School will ensure that backup and cloud service providers used for critical systems and data implement appropriate protection—including encryption of backup data in transit and at rest and physical security of backup storage—through vendor selection, contract or agreement language, and verification of provider practices where feasible.</p>
+    <h3>4.3</h3>
+    <p>Colearn Academy primarily uses cloud‑hosted (SaaS) platforms. For those systems, the School relies on the providers’ built‑in backup and data‑recovery capabilities and documents key retention and restore options made available by the provider.</p>
+    <h3>4.4</h3>
+    <p>For critical data sets (for example, core SIS and LMS records), the School will maintain at least one additional recovery copy by performing periodic exports to a logically separate storage location with restricted access. This separate copy is not used for day‑to‑day operations and is intended to serve as an isolated recovery source in the event that primary data or provider‑managed backups are unavailable or compromised.</p>
+
+    <h2>5. Restoration and Testing</h2>
+    <h3>5.1</h3>
+    <p>The School will periodically test the ability to restore data from backups for at least select systems or data sets, as resources allow.</p>
+    <h3>5.2</h3>
+    <p>Procedures or notes for restoring critical systems or data should be documented and accessible to appropriate personnel during an incident.</p>
+
+    <h2>6. Review</h2>
+    <p>This standard will be reviewed at least annually and updated as needed to reflect changes in systems, priorities, or available backup options.</p>
+
+    <p class="no-print"><a href="policies-index.html">← All Policies</a></p>
+  </main>
+</body>
+</html>

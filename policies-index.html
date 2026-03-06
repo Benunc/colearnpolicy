@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Policies &amp; Standards — Colearn Academy Systems &amp; Security</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --colearn-navy: #12335b;
+      --colearn-navy-light: #1e4a7a;
+      --text: #222;
+      --border: #e0e4e8;
+      --bg-subtle: #f6f8fa;
+    }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; margin: 0; color: var(--text); background: #fff; }
+    .site-header {
+      background: var(--colearn-navy);
+      color: #fff;
+      padding: 1rem 2rem;
+      border-bottom: 3px solid var(--colearn-navy-light);
+    }
+    .site-header h1 { margin: 0; font-size: 1.35rem; font-weight: 600; }
+    nav {
+      background: var(--bg-subtle);
+      padding: 0.5rem 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    nav a {
+      color: var(--colearn-navy);
+      text-decoration: none;
+      padding: 0.5rem 0.75rem;
+      margin-right: 0.25rem;
+      border-radius: 4px;
+    }
+    nav a:hover { background: #e8ecf0; text-decoration: none; }
+    nav a[aria-current="page"] { font-weight: 600; background: #fff; }
+    main { max-width: 52rem; margin: 0 auto; padding: 2rem; }
+    h1, h2 { color: var(--colearn-navy); }
+    h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    .policy-list { list-style: none; padding: 0; margin: 0; }
+    .policy-list li {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.75rem;
+      background: #fff;
+    }
+    .policy-list li h3 { margin: 0 0 0.35rem; font-size: 1.05rem; }
+    .policy-list li h3 a { color: var(--colearn-navy); text-decoration: none; }
+    .policy-list li h3 a:hover { text-decoration: underline; }
+    .policy-list li p { margin: 0; font-size: 0.95rem; color: #444; }
+    .policy-list li .touches { margin-top: 0.35rem; font-size: 0.85rem; color: #666; }
+    .policy-list li.optional .touches::before { content: "Optional for IG1. "; }
+    footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.9rem; color: #666; }
+    .no-print { margin-bottom: 1rem; }
+    .no-print button { padding: 0.4rem 0.75rem; font-size: 0.9rem; cursor: pointer; background: var(--colearn-navy); color: #fff; border: none; border-radius: 4px; }
+    .no-print button:hover { background: var(--colearn-navy-light); }
+    .policy-logo { max-height: 48px; margin-bottom: 1rem; display: block; }
+    .pending-approval { font-weight: 600; color: var(--colearn-navy); background: #e8ecf0; padding: 0.5rem 0.75rem; border-radius: 4px; margin-bottom: 1rem; display: inline-block; }
+    @media print { .site-header, nav, .no-print { display: none !important; } body { background: #fff; color: #000; } main { max-width: none; padding: 0; } a { color: #000; text-decoration: underline; } h1, h2 { color: #000; } .pending-approval { background: #eee; color: #000; border: 1px solid #999; } }
+  </style>
+</head>
+<body>
+  <script src="auth.js"></script>
+  <script>
+  (function(){ if(sessionStorage.getItem('colearn_auth')===PASSWORD_HASH)return; var p=location.pathname+location.search; if(p.indexOf('login.html')!==-1)return; location.replace('login.html?redirect='+encodeURIComponent(p)); })();
+  </script>
+
+  <header class="site-header">
+    <h1>Colearn Academy — Systems &amp; Security</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="security-policy.html">Security Program Policy</a>
+    <a href="policies-index.html" aria-current="page">All Policies</a>
+    <a href="index.html#compliance">State Compliance</a>
+  </nav>
+
+  <main>
+    <p class="no-print"><button type="button" onclick="window.print()">Print / Save as PDF</button></p>
+    <img src="coLearn-academy-logo.png" alt="Colearn Academy" class="policy-logo">
+    <p class="pending-approval">(Drafted March 2026. Pending Governing Board Approval)</p>
+    <h1>Policies &amp; Standards</h1>
+    <p>All information security and cybersecurity policies and standards supporting the <a href="security-policy.html">Information Security &amp; Cybersecurity Program Policy</a>. “Touches” refer to CIS Critical Security Controls (v8) Implementation Group 1 unless noted.</p>
+
+    <ul class="policy-list">
+      <li>
+        <h3><a href="security-policy.html">Information Security &amp; Cybersecurity Program Policy</a></h3>
+        <p>High‑level governance, frameworks (CIS v8 IG1, NIST CSF), roles, review cycle.</p>
+        <p class="touches">Touches: Controls 1–3, 4, 5, 7, 11, 14, 15, 17.</p>
+      </li>
+      <li>
+        <h3><a href="asset-configuration-management.html">Asset &amp; Configuration Management Standard</a></h3>
+        <p>Inventory of cloud systems and credentials used to access them; baseline configuration of those systems. No tracking of individual devices or hardware.</p>
+        <p class="touches">Touches: Control 1 (hardware assets), Control 2 (software assets), Control 4 (secure configuration).</p>
+      </li>
+      <li>
+        <h3><a href="identity-access-management.html">Identity, Account, and Access Management Policy</a></h3>
+        <p>Account lifecycle, roles, least‑privilege, MFA for admins, periodic access reviews.</p>
+        <p class="touches">Touches: Control 5 (Account Management) and Control 6 (Access Control Management).</p>
+      </li>
+      <li>
+        <h3><a href="data-protection-privacy.html">Data Protection &amp; Privacy Policy</a></h3>
+        <p>Data classification (at a simple level), storage/handling rules, encryption “where feasible,” retention and disposal.</p>
+        <p class="touches">Touches: Control 3 (Data Protection), intersects with Control 11 (Data Recovery) and Control 15 (Service Provider Management).</p>
+      </li>
+      <li>
+        <h3><a href="vulnerability-patch-management.html">Vulnerability &amp; Patch Management Standard</a></h3>
+        <p>How you keep OS/applications updated, how you respond to “high” or “critical” vulnerabilities, basic cadence.</p>
+        <p class="touches">Touches: Control 7 (Continuous Vulnerability Management) and parts of Control 4.</p>
+      </li>
+      <li>
+        <h3><a href="logging-monitoring.html">Logging &amp; Monitoring Standard</a></h3>
+        <p>What logs you keep (e.g., cloud admin actions, sign‑ins, endpoint alerts) and minimal retention; who reviews them and when.</p>
+        <p class="touches">Touches: Control 8 (Audit Log Management), supports Control 17.</p>
+      </li>
+      <li>
+        <h3><a href="email-web-endpoint-protection.html">Email, Web, and Endpoint Protection Standard</a></h3>
+        <p>Spam/malware filtering, attachment/URL defenses, basic web protections (e.g., student content filters if applicable), antivirus/EDR expectations.</p>
+        <p class="touches">Touches: Control 9 (Email and Web Browser Protections), Control 10 (Malware Defenses).</p>
+      </li>
+      <li>
+        <h3><a href="backup-recovery.html">Backup &amp; Recovery Standard</a></h3>
+        <p>What gets backed up, how often, where, how long you keep it, and a requirement to periodically test restoration.</p>
+        <p class="touches">Touches: Control 11 (Data Recovery) and supports Control 3 (Data Protection).</p>
+      </li>
+      <li>
+        <h3><a href="service-provider-vendor-security.html">Service Provider / Vendor Security Policy</a></h3>
+        <p>Minimal security language you expect in contracts, due‑diligence questions, how you track critical vendors.</p>
+        <p class="touches">Touches: Control 15 (Service Provider Management).</p>
+      </li>
+      <li>
+        <h3><a href="security-awareness-training.html">Security Awareness &amp; Training Policy</a></h3>
+        <p>Who must take training, how often, and core topics (phishing, passwords, device care, student data handling).</p>
+        <p class="touches">Touches: Control 14 (Security Awareness and Skills Training).</p>
+      </li>
+      <li>
+        <h3><a href="incident-response.html">Incident Response Plan</a></h3>
+        <p>Roles, phases (detect, triage, contain, eradicate, recover), communications, when to notify law enforcement, parents, regulators/authorizers.</p>
+        <p class="touches">Touches: Control 17 (Incident Response Management) and uses info from Controls 8, 11, 14.</p>
+      </li>
+    </ul>
+
+    <footer class="no-print">
+      <p><a href="index.html">← Back to Home</a></p>
+    </footer>
+  </main>
+
+</body>
+</html>

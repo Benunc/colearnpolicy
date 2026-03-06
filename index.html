@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Systems &amp; Security — Colearn Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Colearn Academy systems and cybersecurity program information. Compliance and security documentation for authorizers and stakeholders.">
+  <style>
+    :root {
+      --colearn-navy: #12335b;
+      --colearn-navy-light: #1e4a7a;
+      --text: #222;
+      --border: #e0e4e8;
+      --bg-subtle: #f6f8fa;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      color: var(--text);
+      background: #fff;
+    }
+    .site-header {
+      background: var(--colearn-navy);
+      color: #fff;
+      padding: 1rem 2rem;
+      border-bottom: 3px solid var(--colearn-navy-light);
+    }
+    .site-header h1 { margin: 0; font-size: 1.35rem; font-weight: 600; }
+    .site-header p { margin: 0.25rem 0 0; opacity: 0.9; font-size: 0.95rem; }
+    nav {
+      background: var(--bg-subtle);
+      padding: 0.5rem 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    nav a {
+      color: var(--colearn-navy);
+      text-decoration: none;
+      padding: 0.5rem 0.75rem;
+      margin-right: 0.25rem;
+      border-radius: 4px;
+    }
+    nav a:hover { background: #e8ecf0; text-decoration: none; }
+    nav a[aria-current="page"] { font-weight: 600; background: #fff; }
+    main { max-width: 52rem; margin: 0 auto; padding: 2rem; }
+    h2 { color: var(--colearn-navy); font-size: 1.4rem; margin-top: 1.5rem; }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+      background: #fff;
+    }
+    .card h3 { margin: 0 0 0.5rem; color: var(--colearn-navy); font-size: 1.1rem; }
+    .card p { margin: 0 0 0.75rem; }
+    .card p:last-child { margin-bottom: 0; }
+    .card a {
+      color: var(--colearn-navy-light);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .card a:hover { text-decoration: underline; }
+    .card.coming { opacity: 0.85; }
+    .card.coming .badge { font-size: 0.75rem; color: #666; background: var(--bg-subtle); padding: 0.2rem 0.5rem; border-radius: 4px; }
+    footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <script src="auth.js"></script>
+  <script>
+  (function(){ if(sessionStorage.getItem('colearn_auth')===PASSWORD_HASH)return; var p=location.pathname+location.search; if(p.indexOf('login.html')!==-1)return; location.replace('login.html?redirect='+encodeURIComponent(p)); })();
+  </script>
+
+  <header class="site-header">
+    <h1>Colearn Academy — Systems &amp; Security</h1>
+    <p>Technology, cybersecurity program, and compliance documentation for authorizers and stakeholders.</p>
+  </header>
+
+  <nav>
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="security-policy.html">Security Program Policy</a>
+    <a href="policies-index.html">All Policies</a>
+    <a href="index.html#compliance">State Compliance</a>
+  </nav>
+
+  <main>
+    <h2>Overview</h2>
+    <p>
+      This site provides public documentation of Colearn Academy’s information security and cybersecurity program,
+      including our policy, frameworks, and evidence of alignment with requirements in the states we serve.
+      Content here is suitable for authorizers, state agencies, and the public and contains no student or staff PII.
+    </p>
+
+    <h2>Key Documents</h2>
+    <div class="card">
+      <h3>Information Security &amp; Cybersecurity Program Policy</h3>
+      <p>
+        Our baseline policy establishing the cybersecurity program: purpose, scope, governance, framework alignment
+        (CIS Controls IG1, NIST CSF), assessment and roadmap, core control areas, and review process.
+      </p>
+      <p><a href="security-policy.html">Read the full policy →</a></p>
+    </div>
+    <div class="card">
+      <h3>All Policies &amp; Standards</h3>
+      <p>
+        Specific policies and standards (asset management, identity &amp; access, data protection, vulnerability management,
+        logging, email/web/endpoint protection, backup &amp; recovery, vendor security, awareness &amp; training, incident response, and optional network/app guidance).
+      </p>
+      <p><a href="policies-index.html">View all policies →</a></p>
+    </div>
+
+    <h2 id="compliance">State Compliance</h2>
+    <p>
+      Evidence and summaries of compliance with security and technology expectations for each authorizing state.
+      Links will be added as sections are published.
+    </p>
+    <div class="card coming">
+      <h3>Arizona <span class="badge">Coming soon</span></h3>
+      <p>Compliance documentation for Arizona. In Arizona, Colearn Academy operates as its own district.</p>
+    </div>
+    <div class="card coming">
+      <h3>South Carolina <span class="badge">Coming soon</span></h3>
+      <p>Compliance documentation for South Carolina. Currently authorized by Limestone Charter Association; joining Charter Institute at Erskine (Erskine Charter) next school year.</p>
+    </div>
+
+    <footer>
+      <p>Colearn Academy · Director of Technology and Systems · Intended for deployment at systems.colearn-academy.com</p>
+    </footer>
+  </main>
+
+</body>
+</html>
