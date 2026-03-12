@@ -10,7 +10,8 @@
     :root { --colearn-navy: #12335b; --colearn-navy-light: #1e4a7a; --text: #222; --border: #e0e4e8; --bg-subtle: #f6f8fa; }
     body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; margin: 0; color: var(--text); background: #fff; }
     .site-header { background: var(--colearn-navy); color: #fff; padding: 1rem 2rem; border-bottom: 3px solid var(--colearn-navy-light); }
-    .site-header h1 { margin: 0; font-size: 1.35rem; font-weight: 600; }
+    .site-header h1 { margin: 0; font-size: 1.35rem; font-weight: 600; color: #fff; }
+    .site-header p { margin: 0.25rem 0 0; opacity: 0.9; font-size: 0.95rem; }
     nav { background: var(--bg-subtle); padding: 0.5rem 2rem; border-bottom: 1px solid var(--border); }
     nav a { color: var(--colearn-navy); text-decoration: none; padding: 0.5rem 0.75rem; margin-right: 0.25rem; border-radius: 4px; }
     nav a:hover { background: #e8ecf0; text-decoration: none; }
@@ -38,11 +39,12 @@
   <script>
   (function(){ if(sessionStorage.getItem('colearn_auth')===PASSWORD_HASH)return; var p=location.pathname+location.search; if(p.indexOf('login.html')!==-1)return; location.replace('login.html?redirect='+encodeURIComponent(p)); })();
   </script>
-  <header class="site-header"><h1>Colearn Academy — Systems &amp; Security</h1></header>
+  <header class="site-header"><h1>Colearn Academy — Systems &amp; Security</h1><p>Board and compliance readiness: policies and CIS Controls assessment.</p></header>
   <nav>
     <a href="index.html">Home</a>
     <a href="security-policy.html">Security Program Policy</a>
-    <a href="policies-index.html">All Policies</a>
+    <a href="policies-index.html">Policy Index</a>
+    <a href="all-policies.html">All Policies</a>
   </nav>
   <main>
     <p class="no-print"><button type="button" onclick="window.print()">Print / Save as PDF</button></p>
@@ -82,7 +84,7 @@
     <h2>7. Review</h2>
     <p>This standard will be reviewed at least annually and updated as needed to reflect changes in technology, risk, or best practices.</p>
 
-    <p class="no-print"><a href="policies-index.html">← All Policies</a></p>
+    <p class="no-print"><a href="policies-index.html">← Policy Index</a></p>
   </main>
 </body>
 </html>
