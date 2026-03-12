@@ -1,0 +1,173 @@
+Control,Question No.,Question Title,Question Description,Policy Defined,Control Implemented,Control Automated,Control Reported,Completed By,Validated By,Assigned To,Evidence Docs
+CIS C01,1.4,Maintain Detailed Asset Inventory,"Maintain an accurate and up-to-date inventory of all technology assets with the potential to store or process information. This inventory shall include all hardware assets, whether connected to the organization's network or not.",Written Policy,Not Applicable,Not Applicable,Not Applicable,Ben Meredith,,Ben Meredith,Yes
+CIS C01,1.6,"Address Unauthorized
+Assets
+","Ensure that unauthorized assets are either
+removed from the network, quarantined or
+the inventory is updated in a timely manner.
+",Written Policy,Not Applicable,Not Applicable,Not Applicable,Ben Meredith,,Ben Meredith,Yes
+CIS C02,2.1,"Maintain Inventory of
+Authorized Software
+",Maintain an up-to-date list of all authorized software that is required in the enterprise for any business purpose on any business system.,Written Policy,Not Applicable,Not Applicable,Not Applicable,Ben Meredith,,Ben Meredith,Yes
+CIS C02,2.2,"Ensure Software is
+Supported by Vendor
+",Ensure that only software applications or operating systems currently supported and receiving vendor updates are added to the organization's authorized software inventory. Unsupported software should be tagged as unsupported in the inventory system.,Written Policy,Implemented on All Systems,Not Automated,Reported on Most Systems,Ben Meredith,,Ben Meredith,Yes
+CIS C02,2.6,"Address Unapproved
+Software",Ensure that unauthorized software is either removed or the inventory is updated in a timely manner.,Written Policy,Not Applicable,Not Applicable,Not Applicable,Ben Meredith,,Ben Meredith,Yes
+CIS C03,3.4,Deploy Automated Operating System Patch Management Tools ,Deploy automated software update tools in order to ensure that the operating systems are running the most recent security updates provided by the software vendor.,Written Policy,Not Applicable,Not Applicable,Not Applicable,Ben Meredith,,Ben Meredith,Yes
+CIS C03,3.5,Deploy Automated Software Patch Management Tools ,Deploy automated software update tools in order to ensure that third-party software on all systems is running the most recent security updates provided by the software vendor.,Written Policy,Not Implemented,Not Automated,Not Reported,Ben Meredith,,Ben Meredith,Yes
+CIS C04,4.2,"Change Default
+Passwords
+","Before deploying any new asset, change all default passwords to have values consistent with administrative level accounts.",Written Policy,Parts of Policy Implemented,Parts of Policy Automated,Not Reported,Ben Meredith,,Ben Meredith,Yes
+CIS C04,4.3,"Ensure the Use of Dedicated
+Administrative Accounts","Ensure that all users with administrative account access use a dedicated or secondary account for elevated activities. This account should only be used for administrative activities and not internet browsing, email, or similar activities.",Written Policy,Not Implemented,Not Automated,Not Reported,Ben Meredith,,Ben Meredith,Yes
+CIS C05,5.1,"Establish Secure
+Configurations
+",Maintain documented security configuration standards for all authorized operating systems and software.,Written Policy,Not Applicable,Not Applicable,Not Applicable,Ben Meredith,,Ben Meredith,Yes
+CIS C06,6.2,"Activate Audit
+Logging",Ensure that local logging has been enabled on all systems and networking devices.,Written Policy,Not Applicable,Not Applicable,Not Applicable,Ben Meredith,,Ben Meredith,Yes
+CIS C07,7.1,"Ensure Use of Only
+Fully Supported
+Browsers and Email
+Clients","Ensure that only fully supported web browsers and email clients are allowed to execute in the organization, ideally only using the latest version of the browsers and email clients provided by the vendor.",Written Policy,Parts of Policy Implemented,Parts of Policy Automated,Not Reported,Ben Meredith,,Ben Meredith,Yes
+CIS C07,7.7,"Use of DNS Filtering
+Services",Use Domain Name System (DNS) filtering services to help block access to known malicious domains.,Not Applicable,Not Applicable,Not Applicable,Not Applicable,,,Ben Meredith,No
+CIS C08,8.2,"Ensure Anti-Malware
+Software and Signatures
+are Updated","Ensure that the organization’s anti-malware
+software updates its scanning engine and
+signature database on a regular basis.",Not Applicable,Not Applicable,Not Applicable,Not Applicable,,,Ben Meredith,No
+CIS C08,8.4,"Configure Anti-Malware
+Scanning of Removable
+Devices","Configure devices so that they automatically
+conduct an anti-malware scan of removable
+media when inserted or connected.
+",Not Applicable,Not Applicable,Not Applicable,Not Applicable,,,Ben Meredith,No
+CIS C08,8.5,"Configure Devices to
+Not Auto-Run Content","Configure devices to not auto-run content from
+removable media.",Not Applicable,Not Applicable,Not Applicable,Not Applicable,,,Ben Meredith,No
+CIS C09,9.4,"Apply Host-Based
+Firewalls or Port Filtering","Apply host-based firewalls or port filtering tools
+on end systems, with a default-deny rule that
+drops all traffic except those services and ports
+that are explicitly allowed.",Not Applicable,Not Applicable,Not Applicable,Not Applicable,,,Ben Meredith,No
+CIS C10,10.1,"Ensure Regular
+Automated Backups","Ensure that all system data is automatically
+backed up on a regular basis.",Written Policy,Implemented on Some Systems,Automated on Some Systems,Reported on Some Systems,Ben Meredith,,Ben Meredith,Yes
+CIS C10,10.2,"Perform Complete
+System Backups","Ensure that all of the organization’s key systems
+are backed up as a complete system, through
+processes such as imaging, to enable the quick
+recovery of an entire system.",Not Applicable,Not Applicable,Not Applicable,Not Applicable,,,Ben Meredith,No
+CIS C10,10.4,Protect Backups,"Ensure that backups are properly protected via
+physical security or encryption when they are
+stored, as well as when they are moved across the
+network. This includes remote backups and cloud
+services.
+",Written Policy,Implemented on Some Systems,Automated on Some Systems,Reported on Some Systems,Ben Meredith,,Ben Meredith,Yes
+CIS C10,10.5,"Ensure All Backups Have
+at Least One Offline
+Backup Destination","Ensure that all backups have at least one offline (i.e., not accessible via a network connection) backup destination.",Written Policy,Not Implemented,Not Automated,Not Reported,Ben Meredith,,Ben Meredith,Yes
+CIS C11,11.4,"Install the Latest Stable
+Version of Any Security-Related
+Updates on All
+Network Devices","Install the latest stable version of any security-related
+updates on all network devices.
+",Not Applicable,Not Applicable,Not Applicable,Not Applicable,,,Ben Meredith,No
+CIS C12,12.1,"Maintain an Inventory of
+Network Boundaries","Maintain an up-to-date inventory of all of the
+organization’s network boundaries.",Not Applicable,Not Applicable,Not Applicable,Not Applicable,,,Ben Meredith,No
+CIS C12,12.4,"Deny Communication
+over Unauthorized Ports","Deny communication over unauthorized TCP or
+UDP ports or application traffic to ensure that
+only authorized protocols are allowed to cross
+the network boundary in or out of the network at
+each of the organization’s network boundaries.
+",Not Applicable,Not Applicable,Not Applicable,Not Applicable,,,Ben Meredith,No
+CIS C13,13.1,"Maintain an Inventory of
+Sensitive Information","Maintain an inventory of all sensitive information stored, processed, or transmitted by the organization's technology systems, including those located onsite or at a remote service provider.",Written Policy,Implemented on Most Systems,Not Automated,Not Reported,Ben Meredith,,Ben Meredith,Yes
+CIS C13,13.2,"Remove Sensitive
+Data or Systems Not
+Regularly Accessed by
+Organization",Remove sensitive data or systems not regularly accessed by the organization from the network. These systems shall only be used as stand alone systems (disconnected from the network) by the business unit needing to occasionally use the system or completely virtualized and powered off until needed.,Not Applicable,Not Applicable,Not Applicable,Not Applicable,,,Ben Meredith,No
+CIS C13,13.6,Encrypt Mobile Device Data,Utilize approved cryptographic mechanisms to protect enterprise data stored on all mobile devices.,Not Applicable,Not Applicable,Not Applicable,Not Applicable,,,Ben Meredith,No
+CIS C14,14.6,"Protect Information
+through Access Control
+Lists","Protect all information stored on systems with
+file system, network share, claims, application,
+or database specific access control lists. These
+controls will enforce the principle that only
+authorized individuals should have access to the
+information based on their need to access the
+information as a part of their responsibilities",Written Policy,Implemented on Some Systems,Not Automated,Not Reported,Ben Meredith,,Ben Meredith,Yes
+CIS C15,15.7,"Leverage the Advanced
+Encryption Standard (AES) to
+Encrypt Wireless Data","Leverage the Advanced Encryption Standard
+(AES) to encrypt wireless data in transit.",Not Applicable,Not Applicable,Not Applicable,Not Applicable,,,Ben Meredith,No
+CIS C15,15.10,"Create Separate Wireless
+Network for Personal and
+Untrusted Devices","Create a separate wireless network for personal
+or untrusted devices. Enterprise access from this
+network should be treated as untrusted and
+filtered and audited accordingly",Not Applicable,Not Applicable,Not Applicable,Not Applicable,,,Ben Meredith,No
+CIS C16,16.8,"Disable Any Unassociated
+Accounts","Disable any account that cannot be associated with a
+business process or business owner.",Written Policy,Implemented on All Systems,Not Automated,Not Reported,Ben Meredith,,Ben Meredith,Yes
+CIS C16,16.9,Disable Dormant Accounts,"Automatically disable dormant accounts after a set
+period of inactivity.",Written Policy,Implemented on Most Systems,Not Automated,Not Reported,Ben Meredith,,Ben Meredith,Yes
+CIS C16,16.11,"Lock Workstation Sessions
+After Inactivity","Automatically lock workstation sessions after a standard
+period of inactivity.",Not Applicable,Not Applicable,Not Applicable,Not Applicable,,,Ben Meredith,No
+CIS C17,17.3,"Implement a Security
+Awareness Program","Create a security awareness program for all
+workforce members to complete on a regular
+basis to ensure they understand and exhibit
+the necessary behaviors and skills to help
+ensure the security of the organization. The
+organization’s security awareness program should
+be communicated in a continuous and engaging
+manner.",Written Policy,Parts of Policy Implemented,Not Automated,Not Reported,Ben Meredith,,Ben Meredith,Yes
+CIS C17,17.5,"Train Workforce on
+Secure Authentication","Train workforce members on the importance of
+enabling and utilizing secure authentication.",Written Policy,Implemented on Some Systems,Not Automated,Not Reported,Ben Meredith,,Ben Meredith,Yes
+CIS C17,17.6,"Train Workforce on
+Identifying Social
+Engineering Attacks","Train the workforce on how to identify different
+forms of social engineering attacks, such as
+phishing, phone scams and impersonation calls.",Written Policy,Parts of Policy Implemented,Not Automated,Not Reported,Ben Meredith,,Ben Meredith,Yes
+CIS C17,17.7,"Train Workforce on
+Sensitive Data Handling","Train workforce members on how to identify and properly store, transfer, archive and destroy sensitive information.",Written Policy,Parts of Policy Implemented,Not Automated,Not Reported,,,Ben Meredith,No
+CIS C17,17.8,"Train Workforce on
+Causes of Unintentional
+Data Exposure","Train workforce members to be aware of causes
+for unintentional data exposures, such as losing
+their mobile devices or emailing the wrong person
+due to autocomplete in email.",Written Policy,Parts of Policy Implemented,Not Automated,Not Reported,,,Ben Meredith,No
+CIS C17,17.9,"Train Workforce Members
+on Identifying and
+Reporting Incidents",Train workforce members to be able to identify the most common indicators of an incident and be able to report such an incident.,Written Policy,Parts of Policy Implemented,Not Automated,Not Reported,,,Ben Meredith,No
+CIS C19,19.1,"Document Incident
+Response Procedures","Ensure that there are written incident response
+plans that define roles of personnel as well as
+phases of incident handling/management.",Written Policy,Parts of Policy Implemented,Not Automated,Not Reported,Ben Meredith,,Ben Meredith,No
+CIS C19,19.3,"Designate Management
+Personnel to Support
+Incident Handling","Designate management personnel, as well as
+backups, who will support the incident handling
+process by acting in key decision-making roles.",Written Policy,Parts of Policy Implemented,Not Automated,Not Reported,,,Ben Meredith,No
+CIS C19,19.5,"Maintain Contact
+Information For
+Reporting Security
+Incidents","Assemble and maintain information on third-party
+contact information to be used to report
+a security incident, such as Law Enforcement,
+relevant government departments, vendors, and
+Information Sharing and Analysis Center (ISAC) partners.",Written Policy,Parts of Policy Implemented,Not Automated,Not Reported,,,Ben Meredith,No
+CIS C19,19.6,"Publish Information
+Regarding Reporting
+Computer Anomalies and
+Incidents","Publish information for all workforce members,
+regarding reporting computer anomalies and
+incidents, to the incident handling team. Such
+information should be included in routine
+employee awareness activities.",Written Policy,Not Implemented,Not Automated,Not Reported,,,Ben Meredith,No

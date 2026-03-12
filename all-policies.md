@@ -69,8 +69,6 @@ This policy will be reviewed at least annually by the Information Security Lead 
 
 # Asset & Configuration Management Standard
 
-Inventory of cloud systems and credentials used to access them; baseline configuration of those systems. No tracking of individual devices or hardware. Touches: Control 1 (hardware assets), Control 2 (software assets), Control 4 (secure configuration).
-
 
 ## 1. Purpose
 
@@ -142,8 +140,6 @@ This standard will be reviewed at least annually and updated as needed to reflec
 
 # Identity, Account, and Access Management Policy
 
-Account lifecycle, roles, least‑privilege, MFA for admins, periodic access reviews. Touches: Control 5 (Account Management) and Control 6 (Access Control Management).
-
 
 ## 1. Purpose
 
@@ -166,6 +162,11 @@ New accounts will be created only upon documented authorization (for example, HR
 ### 3.2
 
 When a user’s role changes or their relationship with the School ends, their access will be updated or disabled in a timely manner based on available processes and tools.
+
+
+### 3.3
+
+Dormant accounts will be automatically disabled after a set period of inactivity, where supported by the system or platform.
 
 
 ## 4. Access Rights and Least Privilege
@@ -236,8 +237,6 @@ This policy will be reviewed at least annually and updated as needed to reflect 
 
 # Data Protection & Privacy Policy
 
-Data classification (at a simple level), storage/handling rules, encryption “where feasible,” retention and disposal. Touches: Control 3 (Data Protection), intersects with Control 11 (Data Recovery) and Control 15 (Service Provider Management).
-
 
 ## 1. Purpose
 
@@ -264,54 +263,72 @@ Colearn Academy will define simple categories of data (for example, public, inte
 Student records, staff personnel information, and other legally protected information will be treated as confidential or sensitive.
 
 
-## 4. Handling and Storage
+## 4. Sensitive Data Inventory
 
 
 ### 4.1
 
-Staff will use school‑approved systems and accounts for storing and transmitting confidential or sensitive data where reasonably practical.
+Colearn Academy will maintain an inventory of systems and applications that store, process, or transmit sensitive data (including student and staff information). The inventory will identify the system or service, the general types of data involved, the designated data owner, and the data's sensitivity level, and will be reviewed and updated at least annually.
 
 
-### 4.2
+### 4.2 Data Access and Least Privilege
 
-Confidential or sensitive data should not be stored on unmanaged personal devices unless specifically authorized and protected by appropriate safeguards.
+Access to systems and data must follow the principle of least privilege. For each key system (e.g., SIS, LMS, Google Workspace, phone/CRM), standard roles and access levels are defined by Colearn Academy. Individual accounts are granted access only to the roles and data necessary for their responsibilities, and these assignments are periodically reviewed against the staff and contractor directory.
 
 
-## 5. Transmission and Sharing
+### 4.3 Data Access Control Lists
+
+For systems that store or process sensitive data (such as the SIS, LMS, productivity and storage platforms, and key communications tools), Colearn Academy will configure access using roles, groups, or application‑specific access control lists so that only authorized individuals have access based on their job responsibilities. The School will use its staff and contractor directory, including role and access information, as the reference for assigning and reviewing these permissions.
+
+
+## 5. Handling and Storage
 
 
 ### 5.1
 
-Confidential or sensitive data should be transmitted using secure methods where feasible (for example, secure portals, encrypted channels, or password‑protected files, as supported by the School’s tools).
+Staff will use school‑approved systems and accounts for storing and transmitting confidential or sensitive data where reasonably practical.
 
 
 ### 5.2
 
-Data sharing with external parties must be consistent with applicable laws, contracts, and agreements.
+Confidential or sensitive data should not be stored on unmanaged personal devices unless specifically authorized and protected by appropriate safeguards.
 
 
-## 6. Retention and Disposal
+## 6. Transmission and Sharing
 
 
 ### 6.1
 
-Data will be retained only as long as needed to meet educational, operational, legal, and regulatory requirements.
+Confidential or sensitive data should be transmitted using secure methods where feasible (for example, secure portals, encrypted channels, or password‑protected files, as supported by the School’s tools).
 
 
 ### 6.2
 
-When data is no longer needed and is eligible for disposal, it should be destroyed or deleted in a manner that reduces the likelihood of unauthorized access (for example, secure deletion in systems under school control or following vendor‑provided guidance).
+Data sharing with external parties must be consistent with applicable laws, contracts, and agreements.
 
 
-## 7. Privacy Considerations
+## 7. Retention and Disposal
 
 
 ### 7.1
 
+Data will be retained only as long as needed to meet educational, operational, legal, and regulatory requirements.
+
+
+### 7.2
+
+When data is no longer needed and is eligible for disposal, it should be destroyed or deleted in a manner that reduces the likelihood of unauthorized access (for example, secure deletion in systems under school control or following vendor‑provided guidance).
+
+
+## 8. Privacy Considerations
+
+
+### 8.1
+
 The School will take reasonable steps to comply with applicable student and staff privacy requirements and will publish appropriate notices or statements describing how key categories of information are used and protected.
 
 
-## 8. Review
+## 9. Review
 
 This policy will be reviewed at least annually and updated as needed to reflect changes in law, regulation, technology, or school practices.
 
@@ -321,8 +338,6 @@ This policy will be reviewed at least annually and updated as needed to reflect 
 
 
 # Vulnerability & Patch Management Standard
-
-How you keep OS/applications updated, how you respond to “high” or “critical” vulnerabilities, basic cadence. Touches: Control 7 (Continuous Vulnerability Management) and parts of Control 4.
 
 
 ## 1. Purpose
@@ -382,8 +397,6 @@ This standard will be reviewed at least annually and updated as needed to reflec
 
 # Logging & Monitoring Standard
 
-What logs you keep (e.g., cloud admin actions, sign‑ins, endpoint alerts) and minimal retention; who reviews them and when (even if lightweight). Touches: Control 8 (Audit Log Management), supports Control 17.
-
 
 ## 1. Purpose
 
@@ -436,8 +449,6 @@ This standard will be reviewed at least annually and updated as needed based on 
 
 
 # Email, Web, and Endpoint Protection Standard
-
-Spam/malware filtering expectations, attachment/URL defenses, basic web protections (e.g., student content filters if applicable), antivirus/EDR expectations. Touches: Control 9 (Email and Web Browser Protections), Control 10 (Malware Defenses).
 
 
 ## 1. Purpose
@@ -520,8 +531,6 @@ This standard will be reviewed at least annually and updated as needed to reflec
 
 # Backup & Recovery Standard
 
-What gets backed up, how often, where, how long you keep it, and a requirement to periodically test restoration. Touches: Control 11 (Data Recovery) and supports Control 3 (Data Protection).
-
 
 ## 1. Purpose
 
@@ -595,8 +604,6 @@ This standard will be reviewed at least annually and updated as needed to reflec
 
 # Service Provider / Vendor Security Policy
 
-Minimal security language you expect in contracts, due‑diligence questions, how you track critical vendors. Touches: Control 15 (Service Provider Management).
-
 
 ## 1. Purpose
 
@@ -650,8 +657,6 @@ This policy will be reviewed at least annually and updated as needed to reflect 
 
 # Security Awareness & Training Policy
 
-Who must take training, how often, and core topics (phishing, passwords, device care, student data handling). Touches: Control 14 (Security Awareness and Skills Training).
-
 
 ## 1. Purpose
 
@@ -670,12 +675,12 @@ This policy applies to employees and, where appropriate, to contractors and volu
 
 ### 3.1
 
-Colearn Academy will provide periodic cybersecurity awareness training for staff. Training topics may include recognizing phishing and social engineering, using strong authentication practices, protecting devices, and appropriately handling student and staff information.
+Colearn Academy will provide cybersecurity awareness training for staff on a regular basis, at least annually, and more frequently as needed based on risk and emerging threats.
 
 
 ### 3.2
 
-Completion of required training may be tracked to support accountability.
+Completion of required training will be tracked to support accountability and to help confirm that all workforce members within scope have participated.
 
 
 ## 4. Student Awareness
@@ -704,8 +709,6 @@ This policy will be reviewed at least annually and updated as needed to reflect 
 
 
 # Incident Response Plan
-
-Roles, phases (detect, triage, contain, eradicate, recover), communications, when to notify law enforcement, parents, regulators/authorizers. Touches: Control 17 (Incident Response Management) and uses info from Controls 8, 11, 14.
 
 
 ## 1. Purpose
